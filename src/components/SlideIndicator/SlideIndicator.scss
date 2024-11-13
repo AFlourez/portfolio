@@ -1,0 +1,30 @@
+@import '../../styles/main.scss';
+
+.slide-indicator {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 72%;
+    transform: translateX(-50%);
+      @media only screen and (max-width : 768px) {
+        gap: 5px
+        }
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4); // Couleur inactive
+      @media only screen and (max-width : 768px) {
+        width: 8px;
+        height: 8px;
+        }
+    
+    &.active {
+      background-color: $electric-blue; // Couleur active, remplace par ton accent
+    }
+  }
+  

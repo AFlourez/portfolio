@@ -1,0 +1,39 @@
+// Centrage d'éléments
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-text($min-size, $medium-size, $max-size) {
+  font-size: $min-size; // Par défaut à la taille minimale
+
+  // Pour les écrans entre 768px et 1224px
+  @media (min-width: 768px) and (max-width: 1224px) {
+    font-size: $medium-size;
+  }
+
+  // Pour les écrans plus larges que 1224px
+  @media (min-width: 1225px) {
+    font-size: $max-size;
+  }
+}
+
+
+// Bordure pour le carousel
+@mixin border-carousel {
+  border-radius: 50px 0px;
+}
+
+// Style pour les boutons
+@mixin button-style($bg-color, $text-color, $hover-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}

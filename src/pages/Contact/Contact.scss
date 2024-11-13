@@ -1,0 +1,94 @@
+@import '../../styles/main.scss';
+
+.contact {
+    padding: 50px 20px;
+    color: $white;
+    background-color: $dark-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+  
+    .contact-title {
+      @include responsive-text(1.5rem, 2rem, 2.5rem);
+      margin-bottom: 10px;
+      background: $gradient-accent;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    .contact-intro {
+      margin-bottom: 30px;
+      @include responsive-text(0.9em, 1.1rem, 1.2rem);
+      color: $white;
+      opacity: 0.8;
+    }
+  
+    .contact-form-container {
+      width: 100%;
+      max-width: 600px;
+  
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: $light-black;
+        
+        label {
+          @include responsive-text(0.9em, 1.0rem, 1.2rem);
+          color: $white;
+        }
+  
+        input, textarea {
+          background-color: $dark-black;
+          border: none;
+          border-radius: 5px;
+          padding: 10px;
+          color: $white;
+  
+          &:focus {
+            outline: none;
+            border-color: $gradient-accent;
+          }
+        }
+  
+        .send-button {
+          background-color: $electric-blue;
+          @include responsive-text(1rem, 1.2rem, 1.4rem);
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          color: $dark-black;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-image: $gradient-accent;
+          }
+        }
+      }
+    }
+  
+    .contact-info {
+      margin-top: 20px;
+      @include responsive-text(0.7em, 0.9rem, 1.1rem);
+  
+      p {
+        margin: 5px 0;
+  
+        a {
+          color: $electric-blue;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

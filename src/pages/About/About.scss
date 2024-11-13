@@ -1,0 +1,107 @@
+@import '../../styles/main.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: $dark-black;
+  height: 100vh;
+  gap: 30px;
+
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .section {
+    width: 100%;
+    background-color: $light-black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Ajout de la transition pour les interactions */
+
+    h2 {
+      @include responsive-text(1.2rem, 1.4rem, 1.6rem);
+      color: $electric-blue;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid $dark-black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .arrow {
+      transition: transform 1s ease; /* Animation de la flèche */
+    }
+
+    .arrow.open {
+      transform: rotate(360deg); /* Rotation de la flèche quand la section est ouverte */
+    }
+
+    .section-content {
+      padding: 5px 0;
+      background-color: $light-black;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .section-content.expanded {
+      display: block;
+      @include responsive-text(0.8em, 1rem, 1rem);
+    }
+  }
+
+  .cv-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 220px;
+    color: #00FFFF;
+    text-decoration: none;
+    padding: 15px;
+    border: 1px solid #00FFFF;
+    border-radius: 20px;
+
+    h2 {
+      @include responsive-text(1.2rem, 1.4rem, 1.6rem);
+      color: $electric-blue;
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+    }
+
+    a{
+      text-decoration: none;
+      color: $white;
+      @include responsive-text(0.8em, 1rem, 1rem);
+    }
+
+    &:hover {
+      background-image: $gradient-accent;
+    }
+
+      @media only screen and (max-width : 550px) {
+        width: auto;
+        }
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  h1 {
+    @include responsive-text(1.5rem, 2rem, 2.5rem);
+    font-weight: bold;
+    background: $gradient-accent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
