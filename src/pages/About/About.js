@@ -20,7 +20,7 @@ const About = () => (
       </ToggleSection>
 
       <ToggleSection title="Objectifs">
-        <p>"Allier mes compétences en développement informatique et en commerce pour concevoir des solutions innovantes et orientées client."</p>
+        <p>Allier mes compétences en développement informatique et en commerce pour concevoir des solutions innovantes et orientées client.</p>
       </ToggleSection>
 
       <ToggleSection title="Centre d'intérêts">
