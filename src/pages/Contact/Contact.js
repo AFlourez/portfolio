@@ -11,6 +11,7 @@ const Contact = () => {
         <form
           className="contact-form"
           action="https://formspree.io/f/movqwyba"
+          method="POST"
         >
           <label htmlFor="name">Nom</label>
           <input type="text" id="name" name="name" placeholder="Votre nom" required />
