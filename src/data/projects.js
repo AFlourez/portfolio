@@ -23,7 +23,7 @@ export const projects = [
   {
     id: 3,
     image: imgProjet3,
-    title: 'Optimisation SEO et Performances pour Nina Carducci Photographe',
+    title: 'Optimisation SEO et Performances pour Nina Carducci',
     description: 'Optimisation des performances et du référencement SEO du site de Nina Carducci, photographe. Amélioration du chargement du site, optimisation des images, mise en place du référencement local, correction des bugs de navigation, et ajout des metas pour les réseaux sociaux. Livraison d’un rapport d’intervention détaillant les actions et leur impact.',
     lienGitHub: "https://github.com/AFlourez/nina-carducci-modifi-",
   },

@@ -9,8 +9,7 @@
   @media only screen and (max-width : 768px) {
     border-radius: 20px;
     padding: 10px 0;
-    height: 450px;
-  }
+    }
 
   .slide {
     display: flex;
@@ -25,7 +24,12 @@
     }
   }
 
-  a.slide-icon-github {
+  .icon-link{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a.slide-icon-github, a.slide-icon-image {
     color: $white;
     font-size: 3rem; 
     transition: color 0.3s, transform 0.3s;
@@ -34,10 +38,17 @@
       color: $electric-blue;
     }
       @media only screen and (max-width : 550px) {
-        font-size: 2.5rem;
+        font-size: 2rem;;
       }
   }
   
+  a.slide-icon-image {
+    display: none;
+      @media only screen and (max-width : 550px) {
+        display: block;
+      }
+  }
+
   h3 {
     @include responsive-text(1.2rem, 1.4rem, 1.6rem);
     background: linear-gradient(0deg, #FF1493, #00FFFF);
@@ -60,8 +71,8 @@
       @include border-carousel;
       object-fit: cover;
 
-      @media only screen and (max-width : 1278px) {
-        border-radius: 20px;
+      @media only screen and (max-width : 550px) {
+        display: none;
       }
     }
   }
@@ -69,6 +80,9 @@
   .text-container {
     color: white;
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     @include responsive-text(0.9em, 1.0rem, 1.2rem);
   }
 
