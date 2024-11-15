@@ -1,9 +1,9 @@
 {
-  "short_name": "Portfolio - Flourez Alexsi",
-  "name": "Portfolio",
+  "short_name": "Portfolio",
+  "name": "Portfolio - Alexis Flourez",
   "icons": [
     {
-      "src": "logo-portfolio.ico",
+      "src": "logo-portfolio.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
