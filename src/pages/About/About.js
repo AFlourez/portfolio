@@ -1,7 +1,7 @@
 import React from 'react';
 import ToggleSection from '../../components/ToggleSelection/ToggleSelection.js';
 import './About.scss';
-import CVImage from '../../asset/CV - Flourez Alexis.png';
+import CVImage from '../../asset/CV - Flourez Alexis.jpg';
 
 const About = () => (
   <div className="about">
