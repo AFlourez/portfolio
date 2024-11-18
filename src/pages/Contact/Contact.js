@@ -29,7 +29,6 @@ const Contact = () => {
       <div className="contact-info">
         <p>Email: <a href="mailto:flourez.alexis@gmail.com">flourez.alexis@gmail.com</a></p>
         <p>Téléphone: <a href="tel:+33658042405">06 58 04 24 05</a></p>
-        <p>Adresse: 138 rue du Bugey, Montalieu Vercieu, 38390</p>
       </div>
     </section>
   );
