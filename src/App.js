@@ -12,21 +12,21 @@ function App() {
     <Router>
       <div className="App">
           <Header />
-        <div className="mainContainer">
-          <div id="home">
-            <Home />
-          </div>
-          <div id="portfolio">
-            <Portfolio />
-          </div>
-          <div id="about">
-            <About />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
-          <Footer />
-        </div>
+          <main className="mainContainer">
+              <div id="home">
+                <Home />
+              </div>
+              <div id="portfolio">
+                <Portfolio />
+              </div>
+              <div id="about">
+                <About />
+              </div>
+              <div id="contact">
+                <Contact />
+              </div>
+        </main>
+        <Footer />
       </div>
     </Router>
   );

@@ -35,16 +35,19 @@
       position: relative;
       }
 
-    h1 {
+    p, h1 {
       @include responsive-text(1.5rem, 2rem, 2.5rem);
       letter-spacing: 1px;
       margin: 0;
       animation: fadeIn 1s ease-out;
     }
+    h1{
+      font-weight: normal;
+    }
 
     .under-text {
-      font-size: 0.7rem;
-      opacity: 0.4;
+      font-size: 0.8rem;
+      opacity: 0.5;
       margin: 10px 0;
       animation: fadeIn 5s ease-out;
       font-style: italic;

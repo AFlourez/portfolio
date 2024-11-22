@@ -12,6 +12,7 @@ export const projects = [
     title: 'Bookie',
     description: 'Développement d’un site web pour Booki permettant de rechercher des hébergements et des activités. Travail en HTML et CSS pour intégrer les maquettes fournies, en respectant les spécifications techniques.',
     lienGitHub: "https://github.com/AFlourez/Bookie",
+    lienSite: "",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const projects = [
     title: 'Sophie Bluel- Architecte d\'Intérieur',
     description: 'Conception et développement de la partie front-end du site portfolio d’une architecte d’intérieur. Développement des pages de présentation des travaux, de la page de connexion administrateur, ainsi qu’une modale pour l’upload de médias.',
     lienGitHub: "https://github.com/AFlourez/Sophie-Bluel-Architecte-d-int-rieur",
+    lienSite: "",
   },
   {
     id: 3,
@@ -26,13 +28,15 @@ export const projects = [
     title: 'Optimisation SEO et Performances pour Nina Carducci',
     description: 'Optimisation des performances et du référencement SEO du site de Nina Carducci, photographe. Amélioration du chargement du site, optimisation des images, mise en place du référencement local, correction des bugs de navigation, et ajout des metas pour les réseaux sociaux. Livraison d’un rapport d’intervention détaillant les actions et leur impact.',
     lienGitHub: "https://github.com/AFlourez/nina-carducci-modifi-",
+    lienSite: "https://aflourez.github.io/nina-carducci-modifi-/",
   },
   {
     id: 4,
     image: imgProjet4, 
-    title: 'Refonte du site Kasa (React + NodeJS)',
+    title: 'Refonte du site Kasa',
     description: 'Refonte complète du site de location d’appartements Kasa. Développement d’une application React avec React Router, en suivant les maquettes Figma responsives. Création de composants tels que la galerie d’images avec défilement circulaire et le menu déroulant avec animations. Mise en place de la structure de données à partir d’un fichier JSON pour afficher les annonces de logement.',
     lienGitHub: "https://github.com/AFlourez/Kasa",
+    lienSite: "",
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ export const projects = [
     title: 'Site de notation de livres "Mon Vieux Grimoire"',
     description: 'Développement du back-end pour un site de notation de livres, permettant aux membres d’ajouter un livre et de lui attribuer une note. Mise en place de l’API pour gérer l’ajout de livres, les évaluations et les images. Optimisation des images envoyées par les utilisateurs pour respecter les bonnes pratiques du Green Code.',
     lienGitHub: "https://github.com/AFlourez/Mon-vieux-Grimoire",
+    lienSite: "",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const projects = [
     title: 'Développement du site "Menu Maker"',
     description: 'Gestion de projet et développement front-end du site "Menu Maker", permettant aux restaurateurs de créer et afficher leurs menus. Préparation des spécifications techniques, organisation d’un tableau Kanban et suivi des tâches en cours, en collaboration avec un dev back-end. Recherche sur les dernières technologies pour intégrer dans le projet.',
     lienGitHub: "",
+    lienSite: "",
   }
   
 ];

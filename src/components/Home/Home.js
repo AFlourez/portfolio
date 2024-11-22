@@ -6,14 +6,13 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home-left">
-        <h1>Bonjour, </h1>
-        <h1>Je suis <span className="highlight">A</span>lexis, </h1>
-        <h1>Développeur Web</h1>
+        <p>Bonjour, </p>
+        <p>Je suis <span className="highlight">A</span>lexis, </p>
+        <h1>Developpeur Front-end</h1>
         <p className="under-text">
           HTML, CSS, JavaScript, React, Git/GitHub, NodeJS, Express, MongoDB, les API REST
         </p>
 
-        {/* Utilisez ScrollButton pour le défilement fluide */}
         <ScrollButton targetId="contact">Me contacter</ScrollButton>
       </div>
       <div className="home-right">
