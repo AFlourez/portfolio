@@ -1,5 +1,41 @@
 @import '../../styles/main.scss';
 
+//////////ToggleSelection///////
+.section {
+    .arrow {
+      display: inline-block;
+      margin-left: 10px;
+      transition: transform 0.3s ease; // Animation de rotation
+    }
+  
+    .open {
+      transform: rotate(0deg); // Rotation de la flèche vers le bas
+    }
+  
+    h2 {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: $electric-blue;
+    }
+  
+    .section-content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease; // Animation pour la transition du contenu
+  
+      &.expanded {
+        max-height: 500px; // Ajustez selon le contenu ou mettez une valeur suffisamment grande
+      }
+  
+      &.collapsed {
+        max-height: 0;
+      }
+    }
+  }
+  
+
 .about {
   display: flex;
   flex-direction: column;

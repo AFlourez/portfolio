@@ -1,4 +1,3 @@
-// ScrollButton.js
 import React from 'react';
 
 const ScrollButton = ({ targetId, children }) => {

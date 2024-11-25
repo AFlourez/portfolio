@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faEye, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedinIn, faGithubSquare } from '@fortawesome/free-brands-svg-icons';

@@ -1,5 +1,5 @@
 import React from 'react';
-import ToggleSection from '../../components/ToggleSelection/ToggleSelection.js';
+import ToggleSection from '../../components/ToggleSelection/ToggleSelection.jsx';
 import './About.scss';
 import CVImage from '../../asset/CV Alexis Flourez.pdf';
 

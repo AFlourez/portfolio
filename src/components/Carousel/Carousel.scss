@@ -1,0 +1,176 @@
+@import '../../styles/main.scss';
+
+.carousel {
+    position: relative;
+    background-color: $light-black;
+    @include border-carousel;
+    bottom: 100px;
+  
+    @media only screen and (max-width: 768px) {
+      border-radius: 20px;
+      padding: 10px 0;
+    }
+  
+    .slide {
+      display: flex;
+      @include border-carousel;
+      height: 320px;
+      position: relative;
+      flex-direction: row;
+  
+      @media only screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        height: auto;
+      }
+    }
+  
+    /* Icon Links */
+    .icon-link {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    a.slide-icon-github, a.slide-icon-image {
+      color: $white;
+      font-size: 3rem;
+      transition: color 0.3s, transform 0.3s;
+  
+      &:hover {
+        color: $electric-blue;
+      }
+  
+      @media only screen and (max-width: 550px) {
+        font-size: 2rem;
+      }
+    }
+  
+    a.slide-icon-image {
+      display: none;
+      @media only screen and (max-width: 550px) {
+        display: block;
+      }
+    }
+  
+    /* Slide Title */
+    h3 {
+      @include responsive-text(1.2rem, 1.4rem, 1.6rem);
+      background: $gradient-accent;
+      margin: 0;
+      background-clip: text;
+      text-align: start;
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+  
+    /* Technologies */
+    .technologies-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+  
+      .tech-icon {
+        font-size: 3rem;
+        color: orangered;
+  
+        @media only screen and (max-width: 550px) {
+          font-size: 2rem;
+          gap: 30px;
+        }
+      }
+    }
+  
+    /* Image Container */
+    .image-container {
+      padding: 10px;
+      flex: 0 0 45%;
+      display: flex;
+  
+      .slide-image {
+        width: 100%;
+        @include border-carousel;
+        object-fit: cover;
+  
+        @media only screen and (max-width: 550px) {
+          display: none;
+        }
+      }
+    }
+  
+    /* Text Container */
+    .text-container {
+      color: $white;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include responsive-text(0.9em, 1.0rem, 1.2rem);
+    }
+  
+  
+    /* Slide Description */
+    .slide-description {
+      text-align: justify;
+    }
+  
+    /* Navigation Arrows */
+    .arrow-icon {
+      position: absolute;
+      bottom: 0;
+      font-size: 4rem;
+      font-weight: bold;
+      background: $gradient-accent;
+      color: transparent;
+      background-clip: text;
+      cursor: pointer;
+      z-index: 2;
+  
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+  
+      &:hover {
+        color: $electric-blue;
+        transform: scale(1.1);
+      }
+  
+      &.left {
+        left: 20px;
+      }
+  
+      &.right {
+        right: 20px;
+      }
+    }
+  }
+  
+  /* Slide Indicator */
+  .slide-indicator {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 72%;
+    transform: translateX(-50%);
+  
+    @media only screen and (max-width: 768px) {
+      gap: 5px;
+    }
+  
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.4);
+  
+      @media only screen and (max-width: 768px) {
+        width: 8px;
+        height: 8px;
+      }
+  
+      &.active {
+        background-color: $electric-blue;
+      }
+    }
+  }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import './Slide.scss';
+// src/components/SlideShow/SlideShow.jsx
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
-import { faHtml5, faCss3Alt, faJs, faReact, faNode, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNode} from '@fortawesome/free-brands-svg-icons';
 import { faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 // Définir un mapping des icônes des technologies
@@ -15,63 +15,28 @@ const techIcons = {
   NodeJs: <FontAwesomeIcon icon={faNode} />,
   Express: <FontAwesomeIcon icon={faServer} />,
   MongoDB: <FontAwesomeIcon icon={faDatabase} />,
-  GitHub: <FontAwesomeIcon icon={faGithub} />,
 };
 
-const Slide = ({ image, title, description, lienGitHub, technologies, onPrev, onNext }) => {
-  // Utiliser les positions de départ et de fin du touché
-  const [touchStartX, setTouchStartX] = useState(0);
-  const [touchEndX, setTouchEndX] = useState(0);
-
-  // Commence le swipe
-  const handleTouchStart = (e) => {
-    setTouchStartX(e.targetTouches[0].clientX);
-  };
-
-  // Fin du swipe
-  const handleTouchMove = (e) => {
-    setTouchEndX(e.targetTouches[0].clientX);
-  };
-
-  // Gère la direction du swipe
-  const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 50) {
-      onNext(); // Swipe vers la gauche, aller au suivant
-    }
-    if (touchStartX - touchEndX < -50) {
-      onPrev(); // Swipe vers la droite, aller au précédent
-    }
-  };
+const Slide = ({ image, title, description, lienGitHub, technologies, }) => {
 
   return (
-    <div
-      className="slide"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      {/* Image */}
+    <div className="slide">
       <div className="image-container">
         <img src={image} alt={`Image du projet ${title}`} className="slide-image" />
       </div>
 
-      {/* Texte */}
       <div className="text-container">
-        <div>
-          <h3>{title}</h3>
-          <p className="slide-description">{description}</p>
-        </div>
-
-        {/* Icônes des technologies */}
+        <h3>{title}</h3>
+        <p className="slide-description">{description}</p>
+        
         <div className="technologies-container">
           {technologies.map((tech) => (
             <span key={tech} className="tech-icon">
-              {techIcons[tech] || tech} {/* Fallback vers le nom si aucune icône */}
+              {techIcons[tech] || tech}
             </span>
           ))}
         </div>
 
-        {/* Liens */}
         <div className="icon-link">
           {lienGitHub && (
             <a href={lienGitHub} className="slide-icon-github" target="_blank" rel="noreferrer">
@@ -83,8 +48,34 @@ const Slide = ({ image, title, description, lienGitHub, technologies, onPrev, on
           </a>
         </div>
       </div>
+    </div>
+  );
+};
 
-      {/* Flèches de navigation */}
+const SlideIndicator = ({ currentIndex, totalSlides }) => {
+  return (
+    <div className="slide-indicator">
+      {Array.from({ length: totalSlides }).map((_, index) => (
+        <span
+          key={index}
+          className={`dot ${index === currentIndex ? 'active' : ''}`}
+        ></span>
+      ))}
+    </div>
+  );
+};
+
+const SlideShow = ({ currentIndex, totalSlides, projects, onPrev, onNext }) => {
+  return (
+    <div className="slide-show">
+      <Slide
+        image={projects[currentIndex].image}
+        title={projects[currentIndex].title}
+        description={projects[currentIndex].description}
+        lienGitHub={projects[currentIndex].lienGitHub}
+        technologies={projects[currentIndex].technoprojet}
+      />
+      <SlideIndicator currentIndex={currentIndex} totalSlides={totalSlides} />
       <div className="arrow-icon left" onClick={onPrev}>
         {"<"}
       </div>
@@ -95,4 +86,4 @@ const Slide = ({ image, title, description, lienGitHub, technologies, onPrev, on
   );
 };
 
-export default Slide;
+export default SlideShow;
