@@ -1,7 +1,7 @@
 import React from 'react';
 import ToggleSection from '../../components/ToggleSelection/ToggleSelection.js';
 import './About.scss';
-import CVImage from '../../asset/CV - Flourez Alexis.jpg';
+import CVImage from '../../asset/CV Alexis Flourez.pdf';
 
 const About = () => (
   <div className="about">
@@ -40,7 +40,7 @@ const About = () => (
       </ToggleSection>
 
       <div className="cv-section">
-      <a href={CVImage} target="_blank" rel="noopener noreferrer">
+      <a href={CVImage} type="application/json" target="_blank" rel="noopener noreferrer">
         <h2>Mon CV</h2>
           Consulter mon CV
         </a>
