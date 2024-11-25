@@ -3,8 +3,22 @@ import './Slide.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faReact, faNode, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
-const Slide = ({ image, title, description, lienGitHub, onPrev, onNext }) => {
+// Définir un mapping des icônes des technologies
+const techIcons = {
+  HTML: <FontAwesomeIcon icon={faHtml5} />,
+  CSS: <FontAwesomeIcon icon={faCss3Alt} />,
+  JavaScript: <FontAwesomeIcon icon={faJs} />,
+  React: <FontAwesomeIcon icon={faReact} />,
+  NodeJs: <FontAwesomeIcon icon={faNode} />,
+  Express: <FontAwesomeIcon icon={faServer} />,
+  MongoDB: <FontAwesomeIcon icon={faDatabase} />,
+  GitHub: <FontAwesomeIcon icon={faGithub} />,
+};
+
+const Slide = ({ image, title, description, lienGitHub, technologies, onPrev, onNext }) => {
   // Utiliser les positions de départ et de fin du touché
   const [touchStartX, setTouchStartX] = useState(0);
   const [touchEndX, setTouchEndX] = useState(0);
@@ -36,30 +50,44 @@ const Slide = ({ image, title, description, lienGitHub, onPrev, onNext }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Image */}
       <div className="image-container">
         <img src={image} alt={`Image du projet ${title}`} className="slide-image" />
       </div>
+
+      {/* Texte */}
       <div className="text-container">
         <div>
           <h3>{title}</h3>
           <p className="slide-description">{description}</p>
         </div>
+
+        {/* Icônes des technologies */}
+        <div className="technologies-container">
+          {technologies.map((tech) => (
+            <span key={tech} className="tech-icon">
+              {techIcons[tech] || tech} {/* Fallback vers le nom si aucune icône */}
+            </span>
+          ))}
+        </div>
+
+        {/* Liens */}
         <div className="icon-link">
-          <a href={lienGitHub} className="slide-icon-github" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
+          {lienGitHub && (
+            <a href={lienGitHub} className="slide-icon-github" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faGithubSquare} />
+            </a>
+          )}
           <a href={image} className="slide-icon-image" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faImage} />
           </a>
         </div>
       </div>
 
-      {/* Flèche gauche */}
+      {/* Flèches de navigation */}
       <div className="arrow-icon left" onClick={onPrev}>
         {"<"}
       </div>
-
-      {/* Flèche droite */}
       <div className="arrow-icon right" onClick={onNext}>
         {">"}
       </div>

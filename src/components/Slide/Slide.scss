@@ -24,6 +24,7 @@
     }
   }
 
+  
   .icon-link{
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,23 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  .technologies-container {
+    display: flex;
+    justify-content:center;
+    gap: 50px;
+    flex-wrap: wrap;
+  
+    .tech-icon {
+      font-size: 3rem;
+      color: orangered;
+      @media only screen and (max-width : 550px) {
+        font-size: 2rem;
+        gap: 30px;
+        margin-top: none;
+      }
+    }
   }
 
   .image-container {

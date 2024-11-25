@@ -1,4 +1,3 @@
-// src/components/Carousel/Carousel.js
 import React, { useState } from 'react';
 import './Carousel.scss';
 import { projects } from '../../data/projects';
@@ -7,7 +6,6 @@ import SlideIndicator from '../SlideIndicator/SlideIndicator';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [hoverDirection, setHoverDirection] = useState(null);
 
   const nextSlide = () => {
     setCurrentIndex((currentIndex + 1) % projects.length);
@@ -24,12 +22,11 @@ const Carousel = () => {
         title={projects[currentIndex].title}
         description={projects[currentIndex].description}
         lienGitHub={projects[currentIndex].lienGitHub}
+        lienSite={projects[currentIndex].lienSite}
+        technologies={projects[currentIndex].technoprojet}
         onPrev={prevSlide}
         onNext={nextSlide}
-        hoverDirection={hoverDirection}
-        setHoverDirection={setHoverDirection}
       />
-
       <SlideIndicator currentIndex={currentIndex} totalSlides={projects.length} />
     </div>
   );
