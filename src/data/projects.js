@@ -1,9 +1,9 @@
-import imgProjet1 from '../asset/projetBookie.png';
-import imgProjet2 from '../asset/projetSophieBluel.png';
-import imgProjet3 from '../asset/projetNinaResultat.png';
-import imgProjet4 from '../asset/projetKasa.png';
-import imgProjet5 from '../asset/projetMonVieuxGrimoir.png';
-import imgProjet6 from '../asset/projetMenuMaker.png';
+import imgProjet1 from '../asset/projetBookie.webp';
+import imgProjet2 from '../asset/projetSophieBluel.webp';
+import imgProjet3 from '../asset/projetNinaResultat.webp';
+import imgProjet4 from '../asset/projetKasa.webp';
+import imgProjet5 from '../asset/projetMonVieuxGrimoir.webp';
+import imgProjet6 from '../asset/projetMenuMaker.webp';
 
 export const projects = [
   {
