@@ -20,22 +20,22 @@ const About = () => (
       </ToggleSection>
 
       <ToggleSection title="Objectifs">
-        <p>Allier mes compétences en développement informatique et en commerce pour concevoir des solutions innovantes et orientées client.</p>
+        <p>Fort d'une expérience en gestion de projet et relation client, je me suis formé au développement web pour exercer un métier qui me passionne.</p>
       </ToggleSection>
 
       <ToggleSection title="Centre d'intérêts">
         <p>Culture japonaise</p>
         <p>Musique</p>
-        <p>Jeux vidéos (Jeu de rôle / stratégie)</p>
+        <p>Nouvelle technologie</p>
       </ToggleSection>
 
-      <ToggleSection title="Compétences">
+      <ToggleSection title="Soft skill">
         <ul>
-          <li>Gestion de projet</li>
-          <li>Polyvalence</li>
-          <li>Contact humain</li>
-          <li>Informatique</li>
-          <li>Autonomie</li>
+          <li>Optimiste</li>
+          <li>Ponctualité</li>
+          <li>Adaptabilité</li>
+          <li>Esprit d’équipe</li>
+          <li>Écoute</li>
         </ul>
       </ToggleSection>
 
