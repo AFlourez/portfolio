@@ -29,7 +29,7 @@ const About = () => (
         <p>Nouvelle technologie</p>
       </ToggleSection>
 
-      <ToggleSection title="Soft skill">
+      <ToggleSection title="Qualités">
         <ul>
           <li>Optimiste</li>
           <li>Ponctualité</li>
