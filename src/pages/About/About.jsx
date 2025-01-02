@@ -8,7 +8,7 @@ const About = () => (
     <h1 className="title-about">À propos de moi</h1>
     <div className="content">
       <ToggleSection title="Formation">
-        <p>Développement Web (2024)</p>
+        <p>Développeur Informatique RNCP 5 (2024)</p>
         <p>Bac professionnel comptabilité (2011-2014)</p>
       </ToggleSection>
 
